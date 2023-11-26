@@ -1,0 +1,1 @@
+DELETE FROM Cases WHERE case_id = %s;

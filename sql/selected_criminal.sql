@@ -1,0 +1,1 @@
+SELECT * FROM Criminal WHERE cri_id = %s;

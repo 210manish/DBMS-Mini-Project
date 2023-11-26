@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+
+ <button onclick="window.location.href='/adminpage'"
+                    class="px-4 py-2 hover:bg-gray-400/10 transition-all duration-300">
+                ADMIN
+ </button>
+ <button onclick="window.location.href='/detectivepage'"
+                    class="px-4 py-2 hover:bg-gray-400/10 transition-all duration-300">
+                DETECTIVE
+ </button>
+
+{% endblock body %}
+{% block script %}
+<script src="../static/script.js"></script>
+{% endblock script %}

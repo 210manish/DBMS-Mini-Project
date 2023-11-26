@@ -1,0 +1,1 @@
+SELECT cri_id,cri_name FROM Criminal where fingerprint=%s;

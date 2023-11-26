@@ -1,0 +1,1 @@
+SELECT * FROM Cases WHERE CASES.det_id = %s;

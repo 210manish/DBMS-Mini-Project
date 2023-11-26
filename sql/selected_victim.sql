@@ -1,0 +1,1 @@
+SELECT * FROM Victim WHERE Victim.case_id = %s;

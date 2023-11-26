@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="w-full flex justify-center my-4">
+        <form action="/{{ var }}" method="post" class="bg-blue-100 px-16 py-8 rounded-lg shadow-md" enctype="multipart/form-data">
+            <div>
+                Enter CaseID <br>
+                <input type="text" name="case_id" id="case_id" placeholder="CaseID" class="rounded-md border-[1px] border-gray-500 px-2 py-1 focus:border-blue-500 mb-4 mt-1 -ml-1">
+            </div>
+                <label for="image">Select an image to upload:</label>
+		        <input type="file" name="image" id="image">
+		    <br><br>
+<!--            <div>-->
+<!--                Place of Occurrence <br>-->
+<!--                <input type="text" name="p_o_c" id="p_o_c" placeholder="Place of Occurrence" class="rounded-md border-[1px] border-gray-500 px-2 py-1 focus:border-blue-500 mb-4 mt-1 -ml-1">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                Enter Detective ID <br>-->
+<!--                <input type="text" name="det_id" id="det_id" placeholder="Detective ID" class="rounded-md border-[1px] border-gray-500 px-2 py-1 focus:border-blue-500 mb-4 mt-1 -ml-1"> </input>-->
+<!--            </div>-->
+            <div class="flex justify-center">
+                <button class="rounded-lg shadow-md px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white transition-all duration-300 mt-4" type="submit"> Submit </button>
+            </div>
+        </form>
+    </div>
+{% endblock body %}
+

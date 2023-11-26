@@ -1,0 +1,1 @@
+SELECT * FROM Evidence WHERE case_id = %s;

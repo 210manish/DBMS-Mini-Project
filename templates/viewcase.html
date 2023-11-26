@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div id="details" class="outline outline-2 outline-gray-500 w-full rounded-lg max-h-[60vh] overflow-y-auto mt-8">
+    <table id="case_details" class="w-full">
+        <tr class="border-b-2 border-gray-400/70">
+            <th class="tr_view">Case Details Report</th>
+        </tr>
+        <tr class="border-b-2 text-base border-dashed border-gray-400/40">
+            <td class="px-1"> {{ case_id}}</td>
+            <td class="px-1 max-w-[30vw]"> <a href={{case_details}}>View Details</a></td>
+        </tr>
+
+        <tr class="border-b-2 border-gray-400/70"><br></tr>
+    </table>
+    <table id="evidence" class="w-full">
+        <tr class="border-b-2 border-gray-400/70">
+            <th class="tr_view">Evidence</th>
+        </tr>
+
+        <tr class="border-b-2 border-gray-400/70">
+            <th class="px-2 py-1 text-left font-medium"> Case ID</th>
+            <th class="px-2 py-1 text-left font-medium"> Evidence</th>
+        </tr>
+        {% for i in range(len_evi) %}
+        <tr class="border-b-2 text-base border-dashed border-gray-400/40">
+            <td class="px-1"> {{ evidence[i][0] }}</td>
+            <td class="px-1"><img src={{evidence[i][1]}} alt="image" width="110" height="120" style="padding:10px"></td>
+        </tr>
+        {% endfor %}
+        <tr class="border-b-2 border-gray-400/70"><br></tr>
+    </table>
+
+    <table id="criminal" class="w-full">
+        <tr class="tr_view">
+            <th>Criminal</th>
+        </tr>
+
+        <tr class="border-b-2 border-gray-400/70">
+            <th class="px-2 py-1 text-left font-medium"> Criminal ID</th>
+            <th class="px-2 py-1 text-left font-medium"> Criminal Name</th>
+            <th class="px-2 py-1 text-left font-medium"> Fingerprint</th>
+            <th class="px-2 py-1 text-left font-medium"> Age</th>
+            <th class="px-2 py-1 text-left font-medium"> Gender</th>
+        </tr>
+
+        {% for i in range(len_cri) %}
+        <tr class="border-b-2 text-base border-dashed border-gray-400/40">
+            <td class="px-1"> {{ criminal[i][0] }}</td>
+            <td class="px-1"> {{ criminal[i][1] }}</td>
+            <td class="px-1"><img src={{criminal[i][2]}} alt="image" width="110" height="120" style="padding:10px"></td>
+            <td class="px-1"> {{ criminal[i][3] }}</td>
+            <td class="px-1"> {{ criminal[i][4] }}</td>
+        </tr>
+        {% endfor %}
+         <tr class="border-b-2 border-gray-400/70"><br></tr>
+    </table>
+
+    <table id="victim" class="w-full">
+        <tr class="tr_view">
+            <th>Victim</th>
+        </tr>
+
+        <tr class="border-b-2 border-gray-400/70">
+            <th class="px-2 py-1 text-left font-medium"> Victim Name</th>
+            <th class="px-2 py-1 text-left font-medium"> Victim Contact</th>
+            <!--            <th class="px-2 py-1"> &nbsp;</th>-->
+            <!--            <th class="px-2 py-1"> &nbsp;</th>-->
+        </tr>
+        {% for i in range(len_vic) %}
+        <tr class="border-b-2 text-base border-dashed border-gray-400/40">
+            <td class="px-1"> {{ victim[i][1] }}</td>
+            <td class="px-1"> {{ victim[i][2] }}</td>
+        </tr>
+        {% endfor %}
+         <tr class="border-b-2 border-gray-400/70"><br></tr>
+    </table>
+</div>
+
+<br>
+{% endblock body %}
+{% block script %}
+<script src="../static/script.js"></script>
+{% endblock script %}

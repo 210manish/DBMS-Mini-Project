@@ -1,0 +1,1 @@
+SELECT cri_id FROM InvolvedIn WHERE case_id = %s;

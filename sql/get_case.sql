@@ -1,0 +1,1 @@
+SELECT case_id FROM Cases WHERE case_id = %s;

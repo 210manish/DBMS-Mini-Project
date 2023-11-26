@@ -1,0 +1,23 @@
+{% include "base.html"%}
+{% include "flash_message.html"%}
+
+{% block content%}
+<nav class="navig">
+            <a href="/login" class="my-link">Login</a>
+            <a href="/register" class="my-link">Register</a>
+            <a href="/logout" class="my-link">Logout</a>
+        </nav>
+    <h1 class="textdis" >Login</h1><br>
+    <form action="/login" class="my-form" method="POST">
+        <label>ID: </label><input type="text" name="name" id="">
+        <br>
+        <label>Email: </label><input type="email" name="email" id="">
+        <br>
+        <label>Password: </label><input type="password" name="password" id="">
+        <br>
+        <label>Detective/Admin: </label><input type="text" name="da" id="">
+        <br>
+        <button class="green-button">Submit</button>
+    </form>
+
+{% endblock %}

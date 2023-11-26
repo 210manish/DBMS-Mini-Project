@@ -1,0 +1,1 @@
+SELECT fingerprint FROM Criminal;
